@@ -37,8 +37,6 @@ ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/redis
 
 ADD root /
 
-USER 26
-
 # Define default command.
 #CMD ["redis-server", "/etc/redis/redis.conf"]
 ENTRYPOINT ["container-entrypoint"]
