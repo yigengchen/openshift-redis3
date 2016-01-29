@@ -2,6 +2,9 @@ FROM openshift/base-centos7
 
 MAINTAINER Michael Morello <michael.morello@gmail.com>
 
+ENV TIME_ZONE=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
+
 ENV REDIS_VERSION 3.0.5
 
 EXPOSE 6379
